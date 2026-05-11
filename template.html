@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ① Mude o título da aba -->
+  <title>TÍTULO DO TUTORIAL — SPG Treinamentos</title>
+
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="../index.html" class="nav-brand">
+      <img src="../Busca.png" alt="Arcão" class="nav-mascot" />
+      <span class="nav-brand-text">Treinamentos SPG</span>
+    </a>
+    <span class="nav-divider"></span>
+    <a href="../index.html" class="nav-back">Todos os tutoriais</a>
+  </nav>
+
+  <div class="container">
+    <main class="scribe-content">
+
+      <!-- ② Cabeçalho do tutorial -->
+      <div class="tutorial-header">
+        <h1 class="scribe-title">TÍTULO DO TUTORIAL</h1>
+        <p class="scribe-author"><b>Criado por [nome] com Scribe</b></p>
+        <p class="scribe-description">Descrição breve do que este tutorial cobre.</p>
+      </div>
+
+      <!-- ③ Seção (repita quantas precisar) -->
+      <h3 class="scribe-section">Nome da Seção</h3>
+
+      <!-- ④ Slide = passo + screenshot (repita para cada passo) -->
+      <div class="slide">
+        <div class="slide-text">
+          <span class="slide-num">1</span>
+          <p class="slide-instruction">Instrução do passo aqui.</p>
+        </div>
+        <div class="slide-image">
+          <img class="scribe-screenshot" alt="" src="URL_DA_IMAGEM"/>
+        </div>
+      </div>
+
+      <p class="scribe-footer"><a href="#" target="_blank">Criado com Scribe</a></p>
+
+    </main>
+  </div>
+
+  <div id="lightbox" class="lightbox">
+    <button class="lightbox-close" id="lightbox-close">&#x2715;</button>
+    <img id="lightbox-img" src="" alt="" />
+  </div>
+
+  <script>
+    const lb = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lightbox-img');
+    document.querySelectorAll('.scribe-screenshot').forEach(img => {
+      img.addEventListener('click', () => { lbImg.src = img.src; lb.classList.add('active'); });
+    });
+    lb.addEventListener('click', e => { if (e.target !== lbImg) lb.classList.remove('active'); });
+    document.getElementById('lightbox-close').addEventListener('click', () => lb.classList.remove('active'));
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') lb.classList.remove('active'); });
+  </script>
+
+</body>
+</html>

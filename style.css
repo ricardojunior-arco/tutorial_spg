@@ -1,0 +1,384 @@
+/* =============================
+   SPG Treinamentos — Estilos
+   ============================= */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --brand: #2563EB;
+  --brand-light: #EFF6FF;
+  --brand-mid: #DBEAFE;
+  --text: #1E293B;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --bg: #EFF2F8;
+  --white: #ffffff;
+  --radius: 10px;
+  --shadow: 0 1px 3px rgba(0,0,0,0.06), 0 4px 12px rgba(0,0,0,0.05);
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* ── Navegação ── */
+.site-nav {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  padding: 0 28px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  height: 56px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--text);
+}
+
+.nav-mascot {
+  height: 44px;
+  width: auto;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.10));
+}
+
+.nav-brand-text {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+  white-space: nowrap;
+}
+
+.nav-divider {
+  width: 1px;
+  height: 22px;
+  background: var(--border);
+}
+
+.nav-back {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: color 0.15s;
+}
+
+.nav-back::before { content: '←'; }
+.nav-back:hover { color: var(--brand); }
+
+/* ── Hero da index ── */
+.hero {
+  background: linear-gradient(135deg, #C2D9FF 0%, #DBE9FF 45%, var(--bg) 100%);
+  padding: 40px 40px 36px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.hero-text h1 {
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+}
+
+.hero-mascot {
+  width: 100px;
+  height: auto;
+  margin-left: auto;
+  flex-shrink: 0;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.12));
+}
+
+/* ── Container ── */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 32px 32px 64px;
+}
+
+/* ── Cabeçalho de seção (index) ── */
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.section-header svg { color: var(--text-muted); flex-shrink: 0; }
+
+.section-title {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+/* ── Grid de cards (index) ── */
+.tutorials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 14px;
+}
+
+.tutorial-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 22px 22px 18px;
+  text-decoration: none;
+  color: var(--text);
+  transition: box-shadow 0.18s, border-color 0.18s;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tutorial-card:hover {
+  box-shadow: var(--shadow);
+  border-color: var(--brand);
+}
+
+.card-icon {
+  width: 42px;
+  height: 42px;
+  background: var(--brand-light);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.tutorial-card h2 { font-size: 1.05rem; font-weight: 600; line-height: 1.4; }
+.tutorial-card p  { font-size: 0.95rem; color: var(--text-muted); flex-grow: 1; line-height: 1.5; }
+.card-link        { font-size: 0.9rem; color: var(--brand); font-weight: 600; margin-top: 2px; }
+
+/* ════════════════════════════════════
+   Layout de tutorial (estilo slide)
+   ════════════════════════════════════ */
+
+.scribe-content {
+  /* sem card — o deck de slides é o conteúdo */
+}
+
+/* Cabeçalho do tutorial */
+.tutorial-header {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 32px 40px;
+  box-shadow: var(--shadow);
+  margin-bottom: 12px;
+}
+
+.scribe-title {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.scribe-author {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 14px;
+}
+
+.scribe-author a { color: var(--text-muted); }
+
+.scribe-description {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  background: var(--brand-light);
+  border-left: 3px solid var(--brand);
+  padding: 14px 18px;
+  border-radius: 0 6px 6px 0;
+}
+
+/* Separador de seção */
+.scribe-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--brand);
+  background: var(--brand-light);
+  border: 1px solid var(--brand-mid);
+  padding: 10px 18px;
+  border-radius: 6px;
+  margin: 28px 0 8px;
+}
+
+.scribe-section::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: var(--brand);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* ── Slide (passo + screenshot) ── */
+.slide {
+  display: grid;
+  grid-template-columns: 1fr 2.2fr;
+  gap: 40px;
+  align-items: center;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px 32px;
+  box-shadow: var(--shadow);
+  margin-bottom: 10px;
+}
+
+.slide-text {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.slide-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  background: var(--brand);
+  color: var(--white);
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 0.95rem;
+  flex-shrink: 0;
+}
+
+.slide-instruction {
+  font-size: 1.1rem;
+  line-height: 1.65;
+  color: var(--text);
+}
+
+.slide-instruction a { color: var(--brand); }
+
+.slide-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scribe-screenshot {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.09);
+  display: block;
+  cursor: zoom-in;
+  transition: box-shadow 0.15s;
+}
+
+.scribe-screenshot:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+/* Rodapé do tutorial */
+.scribe-footer {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border);
+  padding-top: 20px;
+  margin-top: 28px;
+}
+
+.scribe-footer a { color: var(--text-muted); }
+
+/* ── Lightbox ── */
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.88);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  cursor: zoom-out;
+  padding: 24px;
+}
+
+.lightbox.active { display: flex; }
+
+.lightbox img {
+  max-width: 92vw;
+  max-height: 90vh;
+  border-radius: 10px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+  cursor: default;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  color: rgba(255,255,255,0.8);
+  font-size: 1.8rem;
+  line-height: 1;
+  cursor: pointer;
+  border: none;
+  background: none;
+  transition: color 0.15s;
+}
+
+.lightbox-close:hover { color: #fff; }
+
+/* ── Links gerais ── */
+a { color: var(--brand); }
+
+/* ── Responsivo ── */
+@media (max-width: 800px) {
+  .slide {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .hero {
+    padding: 24px 20px 22px;
+  }
+
+  .hero-text h1 { font-size: 1.6rem; }
+  .hero-mascot  { width: 76px; }
+
+  .container { padding: 20px 16px 48px; }
+
+  .tutorial-header { padding: 24px 20px; }
+
+  .nav-mascot { height: 34px; }
+}

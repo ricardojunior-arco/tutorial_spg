@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Como atribuir um perfil a um usuário — SPG Treinamentos</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="../index.html" class="nav-brand">
+      <img src="../Busca.png" alt="Arcão" class="nav-mascot" />
+      <span class="nav-brand-text">Treinamentos SPG</span>
+    </a>
+    <span class="nav-divider"></span>
+    <a href="../index.html" class="nav-back">Todos os tutoriais</a>
+  </nav>
+
+  <div class="container">
+    <main class="scribe-content">
+
+      <div class="tutorial-header">
+        <h1 class="scribe-title">Como atribuir um perfil a um usuário</h1>
+        <p class="scribe-author"><b>Criado por Ricardo Junior com Scribe</b></p>
+        <p class="scribe-description">Aprenda a navegar pela interface de gestão de usuários para ajustar as permissões de acesso de contas específicas. Este guia apresenta o passo a passo para garantir que sua equipe tenha o nível de acesso correto na plataforma.</p>
+      </div>
+
+      <h3 class="scribe-section">Atribuição de Perfil</h3>
+
+      <div class="slide">
+        <div class="slide-text">
+          <span class="slide-num">1</span>
+          <p class="slide-instruction">Acesse "Início".</p>
+        </div>
+        <div class="slide-image">
+          <img class="scribe-screenshot" alt="" src="https://colony-recorder.s3.amazonaws.com/files/2026-05-11/5d747736-7735-49bc-9ee8-395867e756a1/ascreenshot_069901a328584f85a086be95aee08f9c_text_export.jpeg"/>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div class="slide-text">
+          <span class="slide-num">2</span>
+          <p class="slide-instruction">Selecione "Usuários" no menu lateral.</p>
+        </div>
+        <div class="slide-image">
+          <img class="scribe-screenshot" alt="" src="https://colony-recorder.s3.amazonaws.com/files/2026-05-11/ce99f8b6-462e-4dde-b342-e634c58cb39d/ascreenshot_5eb61c8d6bf24d4b8e425d6bee895609_text_export.jpeg"/>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div class="slide-text">
+          <span class="slide-num">3</span>
+          <p class="slide-instruction">Clique no ícone de edição do usuário desejado.</p>
+        </div>
+        <div class="slide-image">
+          <img class="scribe-screenshot" alt="" src="https://colony-recorder.s3.amazonaws.com/files/2026-05-11/d70b9b3c-9403-40c8-a492-1fc246cfd7e6/ascreenshot_6176bcf46c374e82a2990d485d5a932a_text_export.jpeg"/>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div class="slide-text">
+          <span class="slide-num">4</span>
+          <p class="slide-instruction">Selecione o perfil desejado no campo "Perfil".</p>
+        </div>
+        <div class="slide-image">
+          <img class="scribe-screenshot" alt="" src="https://colony-recorder.s3.amazonaws.com/files/2026-05-11/54b881f9-a71b-4500-b886-1846e5d66eda/stack_animation.webp"/>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div class="slide-text">
+          <span class="slide-num">5</span>
+          <p class="slide-instruction">Clique em "Atualizar" para salvar as alterações.</p>
+        </div>
+        <div class="slide-image">
+          <img class="scribe-screenshot" alt="" src="https://colony-recorder.s3.amazonaws.com/files/2026-05-11/6b303b86-37d0-45ea-90dd-8a5cde109e27/ascreenshot_7cccffe4a25a4db2afd5937308b1364b_text_export.jpeg"/>
+        </div>
+      </div>
+
+      <p class="scribe-footer"><a href="https://scribehow.com/shared/Como_atribuir_um_perfil_a_um_usurio__z1FCRtrFSXuSgqoLCLUV9Q" target="_blank">Criado com Scribe</a></p>
+
+    </main>
+  </div>
+
+  <div id="lightbox" class="lightbox">
+    <button class="lightbox-close" id="lightbox-close">&#x2715;</button>
+    <img id="lightbox-img" src="" alt="" />
+  </div>
+
+  <script>
+    const lb = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lightbox-img');
+    document.querySelectorAll('.scribe-screenshot').forEach(img => {
+      img.addEventListener('click', () => { lbImg.src = img.src; lb.classList.add('active'); });
+    });
+    lb.addEventListener('click', e => { if (e.target !== lbImg) lb.classList.remove('active'); });
+    document.getElementById('lightbox-close').addEventListener('click', () => lb.classList.remove('active'));
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') lb.classList.remove('active'); });
+  </script>
+
+</body>
+</html>
